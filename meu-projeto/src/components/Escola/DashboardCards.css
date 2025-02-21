@@ -1,0 +1,59 @@
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.card-content {
+    color: #666;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2196f3;
+    margin: 10px 0;
+}
+
+.card-description {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.card-icon {
+    float: right;
+    font-size: 2rem;
+    color: #2196f3;
+    opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: 100%;
+    }
+}

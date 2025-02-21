@@ -1,0 +1,25 @@
+.detalhes-escola {
+  padding: 20px;
+}
+
+.jumbotron {
+  background: #3987db;
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.jumbotron hr {
+  border-color: rgba(255, 255, 255, 0.5);
+}

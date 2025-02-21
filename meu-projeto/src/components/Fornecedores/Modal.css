@@ -1,0 +1,150 @@
+/* Estilo geral do overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Estilo da janela do modal */
+.modal-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 600px;
+  max-width: 90%; /* Ajusta o tamanho para telas menores */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Cabeçalho do modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* Corpo do modal */
+.modal-body {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .modal-container {
+    padding: 15px 20px !important;
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Estilos gerais para os campos de input */
+.modal-body input,
+.modal-body select,
+.modal-body textarea {
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+  border: 1px solid #ccc; /* Borda padrão */
+  border-radius: 6px; /* Cantos arredondados */
+  font-size: 1rem; /* Tamanho da fonte */
+  color: #333;
+  box-sizing: border-box; /* Inclui o padding na largura */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Destaque ao focar no campo */
+.modal-body input:focus,
+.modal-body select:focus,
+.modal-body textarea:focus {
+  border-color: #007bff; /* Cor azul */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none; /* Remove o contorno padrão */
+}
+
+/* Botões do modal */
+.modal-footer .btn {
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  border: none; /* Remove a borda */
+  border-radius: 6px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor de clique */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Botão principal */
+.modal-footer .btn-primary {
+  background-color: #007bff; /* Azul padrão */
+  color: #fff;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #0056b3; /* Azul escuro ao passar o mouse */
+}
+
+.modal-footer .btn-primary:active {
+  transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Botão secundário */
+.modal-footer .btn-secondary {
+  background-color: #6c757d; /* Cinza padrão */
+  color: #fff;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #5a6268; /* Cinza escuro ao passar o mouse */
+}
+
+.modal-footer .btn-secondary:active {
+  transform: scale(0.98); /* Efeito de clique */
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
